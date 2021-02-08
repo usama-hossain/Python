@@ -9,6 +9,14 @@ class Employee:
         self.email = first + '.' + last + '@company.com'
 
 
-emp_1 = Employee('Usama', 'Hossain', 100000)
+# If no optional formatter is supplied, a DefaultFormatter is created.
+# DefaultFormatter is a local function class that is not accessible anywhere else.
+def format_string(string, formatter=None):
+    class DefaultFormatter:
+        def format(self, string):
+            return str(string).title()
 
-print(emp_1.first)
+    if not formatter:
+        formatter = DefaultFormatter()
+
+    return formatter.format(string)
