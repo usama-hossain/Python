@@ -10,7 +10,7 @@ class ContactList(list):
 
 
 class Contact:
-    all_contacts = []
+    all_contacts = ContactList()
 
     def __init__(self, name, email):
         self.email = email
