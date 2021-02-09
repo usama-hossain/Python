@@ -22,3 +22,14 @@ class Supplier(Contact):
 
     def order(self, msg):
         print(str(msg))
+
+
+class Friend(Contact):
+
+    # Example of overriding a method.
+    # super() returns an instance of the parent class.
+    # This way, we don't need to repeat code for getting
+    # name and email in our overidden method
+    def __init__(self, name, email, phone):
+        super().__init__(name, email)
+        self.phone = phone
