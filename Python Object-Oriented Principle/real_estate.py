@@ -8,3 +8,14 @@ class Property:
     def display(self):
         print("Property Details!!!")
         print("===================")
+        print("square footage: {}".format(self.square_feet))
+        print("bedrooms: {}".format(self.num_bedrooms))
+        print("bathrooms: {}".format(self.num_baths))
+        print()
+        
+    def prompt_init():
+        return dict(square_feet=input("Enter the square feet: "),
+                    beds=input("Enter the number of beds"),
+                    baths=input("Enter number of baths: "))
+    
+    prompt_init = staticmethod(prompt_init)
